@@ -22,21 +22,24 @@ A React application that allows users to search for GitHub repositories by keywo
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Ahmed-Osama728/Github-repositories-explorer
 cd github-repository-explorer
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Set up your GitHub API token:
-Create a .env file in the root directory.
-Add your GitHub API token to the .env file according to .env.example file.
+   Create a .env file in the root directory.
+   Add your GitHub API token to the .env file according to .env.example file.
 
 4. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -47,20 +50,29 @@ The application will be available at `http://localhost:5173`
 
 ```
 src/
-  ├── assets/            # Static assets 
+  ├── assets/            # Static assets such as images and icons
   ├── components/        # Reusable React components
-  ├── layout/            # Layout components (e.g., header)
-  ├── repository/        # Components related to repository display
-  ├── search/            # Components related to search functionality
-  ├── services/          # API service functions
-  ├── githubRepos.ts     # GitHub API-related logic
-  └── App.tsx            # Main application component
+  │   ├── layout/        # Layout-related components (e.g., Header)
+  │   ├── repository/    # Components for repository display (e.g., RepositoryCard, RepositoryList)
+  │   ├── search/        # Components for search functionality (e.g., SearchBar)
+  │   └── ui/            # UI-specific components (e.g., ErrorMessage, LoadingSpinner)
+  ├── services/          # API service logic and utilities
+  │   ├── githubRepos.ts # GitHub API-related logic
+  │   └── utils.ts       # Utility functions
+  ├── store/             # Global state management
+  │   └── store.ts       # Zustand store configuration
+  ├── App.tsx            # Main application component
+  ├── index.css          # Global CSS styles
+  ├── main.tsx           # Application entry point
+  ├── vite-env.d.ts      # Vite environment type definitions
+  └── types.ts           # TypeScript type definitions
 
-store/
-  ├── store.ts           # Zustand store configuration
+.env                     # Environment variables (ignored by Git)
+.env.example             # Example environment file for reference
+.gitignore               # Git ignore file
+eslint.config.js         # ESLint configuration file
+index.html               # Main HTML file
+package-lock.json        # NPM lock file for dependencies
+package.json             # NPM package configuration
 
-index.css                # Global styles
-main.tsx                 # Application entry point
-vite-env.d.ts            # Vite environment type definitions
-types.ts                 # TypeScript type definitions
 ```
