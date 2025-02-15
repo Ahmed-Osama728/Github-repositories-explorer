@@ -7,8 +7,6 @@ A React application that allows users to search for GitHub repositories by keywo
 - **Search Repositories**: Search for GitHub repositories by keyword.
 - **Repository Details**: View repository name, owner's username, description, star count, and fork count.
 - **Star/Unstar Repositories**: Star or unstar repositories directly from the app.
-- **Responsive UI**: User-friendly and visually appealing interface.
-- **State Management**: Zustand is used to manage search results and starred repositories.
 
 ---
 
