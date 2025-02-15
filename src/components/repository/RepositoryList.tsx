@@ -31,7 +31,7 @@ export function RepositoryList() {
   }
 
   return (
-    <div className="w-full max-w-2xl space-y-4">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-7xl mx-auto">
       {repositories.map((repo) => (
         <RepositoryCard key={repo.id} repository={repo} />
       ))}
